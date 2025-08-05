@@ -7,11 +7,14 @@ class Solution {
             return -1;
         }
         for(int i = 0; i <= hLen - nLen; i++) {
-            int j = 0;
-            while(j < nLen && (haystack.charAt(i + j)) == needle.charAt(j)) {
-                j++;
-            }
-            if(j == nLen) {
+            // int j = 0;
+            // while(j < nLen && (haystack.charAt(i + j)) == needle.charAt(j)) {
+            //     j++;
+            // }
+            // if(j == nLen) {
+            //     return i;
+            // }
+            if(haystack.substring(i, i + nLen).equals(needle)) {
                 return i;
             }
         }
